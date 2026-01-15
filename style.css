@@ -7,10 +7,10 @@
     font-family: 'Orbitron', sans-serif;
 }
 
-/* ========================= BODY (CENTRADO TOTAL) ========================= */
+/* ========================= BODY ========================= */
 body {
     min-height: 100vh;
-    background: radial-gradient(circle at top, #0f0c29, #040012 70%);
+    background: radial-gradient(circle at top, #1a0033, #090014 70%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,28 +18,21 @@ body {
     overflow: hidden;
 }
 
-/* ========================= CONTAINER (POPUP) ========================= */
+/* ========================= CONTAINER ========================= */
 .container {
     width: 100%;
     max-width: 420px;
-    /* solo desktop */
-    min-height: auto;
-    /* clave */
-    height: auto;
-    background: linear-gradient(180deg, #0d0d2b, #050014);
+    background: linear-gradient(180deg, #16002e, #090014);
     border-radius: 22px;
     padding: 25px 20px;
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.25),
-        inset 0 0 20px rgba(0, 255, 255, 0.08);
+    box-shadow: 0 0 30px rgba(177, 76, 255, 0.35),
+        inset 0 0 20px rgba(255, 79, 216, 0.15);
     position: relative;
 }
-
 
 /* ========================= SECTIONS ========================= */
 .section {
     display: none;
-    width: 100%;
-    height: 100%;
     animation: fadeUp 0.4s ease;
 }
 
@@ -52,7 +45,7 @@ body {
     width: 100%;
     display: block;
     margin: 0 auto 20px;
-    filter: drop-shadow(0 0 12px #00f7ff);
+    filter: drop-shadow(0 0 14px #b14cff);
 }
 
 /* ========================= INPUT TEXT ========================= */
@@ -62,14 +55,14 @@ input[type="text"] {
     border-radius: 14px;
     border: none;
     outline: none;
-    background: #0e0e2a;
+    background: #140026;
     color: #fff;
     margin-bottom: 18px;
-    box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.25);
+    box-shadow: inset 0 0 10px rgba(255, 79, 216, 0.3);
 }
 
 input[type="text"]::placeholder {
-    color: #aaa;
+    color: #bbb;
 }
 
 /* ========================= OPTIONS ========================= */
@@ -77,11 +70,11 @@ span {
     display: flex;
     align-items: center;
     gap: 12px;
-    background: #0e0e2a;
+    background: #140026;
     padding: 12px 14px;
     border-radius: 14px;
     margin-bottom: 12px;
-    box-shadow: 0 0 12px rgba(0, 255, 255, 0.15);
+    box-shadow: 0 0 14px rgba(177, 76, 255, 0.25);
     font-size: 14px;
 }
 
@@ -89,13 +82,7 @@ span img {
     width: 28px;
 }
 
-span input[type="radio"] {
-    margin-left: auto;
-    transform: scale(1.3);
-    accent-color: #00f7ff;
-}
-
-/* ========================= BUTTONS ========================= */
+/* ========================= BUTTON ========================= */
 input[type="submit"] {
     width: 100%;
     padding: 15px;
@@ -103,53 +90,20 @@ input[type="submit"] {
     border: none;
     cursor: pointer;
     margin-top: 18px;
-    background: linear-gradient(90deg, #00f7ff, #0055ff);
+    background: linear-gradient(90deg, #b14cff, #ff4fd8);
     color: #000;
     font-weight: bold;
     letter-spacing: 1px;
-    box-shadow: 0 0 25px rgba(0, 247, 255, 0.6);
+    box-shadow: 0 0 30px rgba(255, 79, 216, 0.8);
     transition: 0.3s ease;
 }
 
 input[type="submit"]:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 35px rgba(0, 247, 255, 0.9);
+    box-shadow: 0 0 45px rgba(177, 76, 255, 1);
 }
 
-/* ========================= PROGRESS BAR ========================= */
-.progress-box {
-    width: 100%;
-    height: 28px;
-    background: #0e0e2a;
-    border-radius: 20px;
-    overflow: hidden;
-    margin-top: 50px;
-    position: relative;
-    box-shadow: inset 0 0 12px rgba(0, 255, 255, 0.35);
-}
-
-.progress-bar {
-    height: 100%;
-    width: 0%;
-    background: linear-gradient(90deg, #00f7ff, #0055ff);
-    transition: width 0.1s linear;
-}
-
-#progressText {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    line-height: 28px;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 1rem;
-}
-
-/* =========================
-   SECTION 2 - LOADING CENTER
-========================= */
-
+/* ========================= PROGRESS ========================= */
 .progress-wrapper {
     margin-top: 40px;
     display: flex;
@@ -157,52 +111,36 @@ input[type="submit"]:hover {
     align-items: center;
 }
 
-/* BARRA */
 .progress-box {
     width: 100%;
     height: 28px;
-    background: #0e0e2a;
+    background: #140026;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: inset 0 0 12px rgba(0, 255, 255, 0.35);
+    box-shadow: inset 0 0 14px rgba(255, 79, 216, 0.4);
 }
 
 .progress-bar {
     height: 100%;
     width: 0%;
-    background: linear-gradient(90deg, #00f7ff, #0055ff);
+    background: linear-gradient(90deg, #b14cff, #ff4fd8);
     transition: width 0.1s linear;
 }
 
-/* CONTADOR GAMER */
 .progress-counter {
     margin-top: 14px;
-    font-family: 'Lilita One', cursive;
-    font-size: 312rem;
+    font-size: 2.2rem;
     letter-spacing: 2px;
-
-
+    color: #ff4fd8;
+    text-shadow: 0 0 18px #b14cff;
 }
-
-@keyframes pulseGlow {
-    from {
-        transform: scale(1);
-        opacity: 0.85;
-    }
-
-    to {
-        transform: scale(1.08);
-        opacity: 1;
-    }
-}
-
 
 /* ========================= SECTION 3 ========================= */
 #section3 h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #00f7ff;
-    text-shadow: 0 0 18px #00f7ff;
+    color: #ff4fd8;
+    text-shadow: 0 0 20px #b14cff;
     font-size: 230%;
 }
 
@@ -211,15 +149,14 @@ input[type="submit"]:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 14px;
-    margin-bottom: 20px;
 }
 
 .reward-card {
-    background: linear-gradient(180deg, #10103a, #050014);
+    background: linear-gradient(180deg, #1a0033, #090014);
     border-radius: 14px;
     padding: 10px;
     text-align: center;
-    box-shadow: 0 0 16px rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 18px rgba(177, 76, 255, 0.35);
     animation: pop 0.3s ease;
 }
 
@@ -228,13 +165,48 @@ input[type="submit"]:hover {
     max-width: 85px;
     display: block;
     margin: auto;
-    filter: drop-shadow(0 0 10px #00f7ff);
+    filter: drop-shadow(0 0 12px #ff4fd8);
 }
 
 .reward-card p {
     margin-top: 6px;
     font-size: 13px;
-    color: #00f7ff;
+    color: #ff4fd8;
+}
+
+/* ========================= RADIO SWITCH ========================= */
+span input[type="radio"] {
+    appearance: none;
+    width: 46px;
+    height: 24px;
+    background: #0d001a;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: inset 0 0 10px rgba(177, 76, 255, 0.3);
+}
+
+span input[type="radio"]::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    width: 18px;
+    height: 18px;
+    background: #555;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+span input[type="radio"]:checked {
+    background: linear-gradient(90deg, #b14cff, #ff4fd8);
+    box-shadow: 0 0 18px rgba(255, 79, 216, 1);
+}
+
+span input[type="radio"]:checked::before {
+    transform: translateX(22px);
+    background: #000;
 }
 
 /* ========================= ANIMATIONS ========================= */
@@ -243,7 +215,6 @@ input[type="submit"]:hover {
         opacity: 0;
         transform: translateY(20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -255,7 +226,6 @@ input[type="submit"]:hover {
         transform: scale(0.85);
         opacity: 0;
     }
-
     to {
         transform: scale(1);
         opacity: 1;
@@ -265,83 +235,12 @@ input[type="submit"]:hover {
 /* ========================= RESPONSIVE ========================= */
 @media (max-width: 480px) {
     .container {
-        max-width: 92%;
-        min-height: auto;
+        width: 92vw;
+        max-width: 360px;
         padding: 20px 16px;
-    }
-
-    .logo {
-        width: 100%;
     }
 
     #rewards {
         grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* ========================= RADIO GAMER SWITCH ========================= */
-/* ocultamos el radio original */
-span input[type="radio"] {
-    appearance: none;
-    -webkit-appearance: none;
-    width: 46px;
-    height: 24px;
-    background: #08081d;
-    border-radius: 50px;
-    position: relative;
-    cursor: pointer;
-    box-shadow: inset 0 0 8px rgba(0, 255, 255, 0.2), 0 0 10px rgba(0, 0, 0, 0.8);
-    transition: 0.3s ease;
-}
-
-/* bolita del switch */
-span input[type="radio"]::before {
-    content: "";
-    position: absolute;
-    top: 3px;
-    left: 4px;
-    width: 18px;
-    height: 18px;
-    background: #444;
-    border-radius: 50%;
-    transition: 0.3s ease;
-    box-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
-}
-
-/* estado activo */
-span input[type="radio"]:checked {
-    background: linear-gradient(90deg, #00f7ff, #0055ff);
-    box-shadow: 0 0 12px rgba(0, 247, 255, 0.8), inset 0 0 10px rgba(0, 0, 0, 0.4);
-}
-
-/* bolita cuando está activo */
-span input[type="radio"]:checked::before {
-    transform: translateX(22px);
-    background: #000;
-    box-shadow: 0 0 10px rgba(0, 247, 255, 1), inset 0 0 4px rgba(255, 255, 255, 0.3);
-}
-
-/* hover gamer */
-span:hover input[type="radio"] {
-    box-shadow: 0 0 14px rgba(0, 247, 255, 0.6), inset 0 0 8px rgba(0, 255, 255, 0.2);
-}
-
-@media (max-width: 480px) {
-    body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .container {
-        width: 92vw;
-        max-width: 360px;
-        min-height: auto;
-        border-radius: 20px;
-        padding: 20px 16px;
-    }
-
-    .section {
-        width: 100%;
     }
 }
