@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Efootball Rewards</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <div class="container"> <!-- SECTION 1 -->
+        <section class="section active" id="section1"> <img src="logo white2.png" class="logo"> <input type="text"
+                placeholder="Select your ID"> <span><img src="coin.png">Secret Coins????<input type="radio"></span>
+            <span><img src="gp.png"> Secret GP????<input type="radio"></span> <span><img src="epoints.png"> Secret
+                ePoints????<input type="radio"></span> <span><img src="rp.png"> Random Players <input type="radio">
+            </span> <input type="submit" value="Next" id="btnNext">
+        </section>
+        <section class="section" id="section2">
+            <img src="logo white2.png" class="logo">
+
+            <div class="progress-wrapper">
+                <div class="progress-box">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+
+                <!-- CONTADOR ABAJO -->
+                <div class="progress-counter" id="progressText">1%</div>
+            </div>
+        </section>
+        </section> <!-- SECTION 3 -->
+        <section class="section" id="section3">
+            <h1>Congratulations</h1>
+            <div id="rewards"></div> <input type="submit" value="Home" id="btnHome">
+        </section>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
