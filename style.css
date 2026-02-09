@@ -1,246 +1,282 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Orbitron', sans-serif;
+/* ========================= VARIABLES (FÁCIL CAMBIAR COLORES) ========================= */
+:root{
+    --bg-dark:#050814;
+    --bg-panel:#0b1220;
+    --bg-soft:#0a1020;
+
+    --primary:#00e5ff;
+    --secondary:#00aaff;
+
+    --text:#ffffff;
+    --muted:#9aa3b2;
+}
+
+/* ========================= RESET ========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Orbitron', sans-serif;
 }
 
 /* ========================= BODY ========================= */
-body {
-    min-height: 100vh;
-    background: radial-gradient(circle at top, #1a0033, #090014 70%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    overflow: hidden;
+body{
+    min-height:100vh;
+    background: radial-gradient(circle at top, var(--bg-panel), var(--bg-dark) 70%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--text);
+    overflow:hidden;
 }
 
 /* ========================= CONTAINER ========================= */
-.container {
-    width: 100%;
-    max-width: 420px;
-    background: linear-gradient(180deg, #16002e, #090014);
-    border-radius: 22px;
-    padding: 25px 20px;
-    box-shadow: 0 0 30px rgba(177, 76, 255, 0.35),
-        inset 0 0 20px rgba(255, 79, 216, 0.15);
-    position: relative;
+.container{
+    width:100%;
+    max-width:420px;
+    background: linear-gradient(180deg, var(--bg-panel), var(--bg-dark));
+    border-radius:22px;
+    padding:25px 20px;
+    position:relative;
+
+    box-shadow:
+        0 0 35px rgba(0,229,255,0.25),
+        inset 0 0 25px rgba(0,170,255,0.12);
 }
 
 /* ========================= SECTIONS ========================= */
-.section {
-    display: none;
-    animation: fadeUp 0.4s ease;
+.section{
+    display:none;
+    animation:fadeUp .4s ease;
 }
 
-.section.active {
-    display: block;
+.section.active{
+    display:block;
 }
 
 /* ========================= LOGO ========================= */
-.logo {
-    width: 100%;
-    display: block;
-    margin: 0 auto 20px;
-    filter: drop-shadow(0 0 14px #b14cff);
+.logo{
+    width:100%;
+    display:block;
+    margin:0 auto 20px;
+    filter:drop-shadow(0 0 14px var(--primary));
 }
 
 /* ========================= INPUT TEXT ========================= */
-input[type="text"] {
-    width: 100%;
-    padding: 14px;
-    border-radius: 14px;
-    border: none;
-    outline: none;
-    background: #140026;
-    color: #fff;
-    margin-bottom: 18px;
-    box-shadow: inset 0 0 10px rgba(255, 79, 216, 0.3);
+input[type="text"]{
+    width:100%;
+    padding:14px;
+    border-radius:14px;
+    border:none;
+    outline:none;
+    background:var(--bg-soft);
+    color:var(--text);
+    margin-bottom:18px;
+
+    box-shadow: inset 0 0 12px rgba(0,229,255,0.25);
+    transition:.25s;
 }
 
-input[type="text"]::placeholder {
-    color: #bbb;
+input[type="text"]:focus{
+    box-shadow:0 0 12px var(--primary);
+}
+
+input[type="text"]::placeholder{
+    color:var(--muted);
 }
 
 /* ========================= OPTIONS ========================= */
-span {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: #140026;
-    padding: 12px 14px;
-    border-radius: 14px;
-    margin-bottom: 12px;
-    box-shadow: 0 0 14px rgba(177, 76, 255, 0.25);
-    font-size: 14px;
+span{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:var(--bg-soft);
+    padding:12px 14px;
+    border-radius:14px;
+    margin-bottom:12px;
+
+    box-shadow:0 0 14px rgba(0,229,255,0.15);
+    font-size:14px;
 }
 
-span img {
-    width: 28px;
+span img{
+    width:28px;
 }
 
 /* ========================= BUTTON ========================= */
-input[type="submit"] {
-    width: 100%;
-    padding: 15px;
-    border-radius: 16px;
-    border: none;
-    cursor: pointer;
-    margin-top: 18px;
-    background: linear-gradient(90deg, #b14cff, #ff4fd8);
-    color: #000;
-    font-weight: bold;
-    letter-spacing: 1px;
-    box-shadow: 0 0 30px rgba(255, 79, 216, 0.8);
-    transition: 0.3s ease;
+input[type="submit"]{
+    width:100%;
+    padding:15px;
+    border-radius:16px;
+    border:none;
+    cursor:pointer;
+    margin-top:18px;
+
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+    color:#001018;
+    font-weight:bold;
+    letter-spacing:1px;
+
+    box-shadow:0 0 30px rgba(0,229,255,.8);
+    transition:.3s;
 }
 
-input[type="submit"]:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 45px rgba(177, 76, 255, 1);
+input[type="submit"]:hover{
+    transform:scale(1.06);
+    box-shadow:0 0 45px rgba(0,229,255,1);
 }
 
 /* ========================= PROGRESS ========================= */
-.progress-wrapper {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.progress-wrapper{
+    margin-top:40px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
-.progress-box {
-    width: 100%;
-    height: 28px;
-    background: #140026;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: inset 0 0 14px rgba(255, 79, 216, 0.4);
+.progress-box{
+    width:100%;
+    height:28px;
+    background:var(--bg-soft);
+    border-radius:20px;
+    overflow:hidden;
+
+    box-shadow: inset 0 0 14px rgba(0,229,255,0.3);
 }
 
-.progress-bar {
-    height: 100%;
-    width: 0%;
-    background: linear-gradient(90deg, #b14cff, #ff4fd8);
-    transition: width 0.1s linear;
+.progress-bar{
+    height:100%;
+    width:0%;
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+    transition:width .1s linear;
 }
 
-.progress-counter {
-    margin-top: 14px;
-    font-size: 2.2rem;
-    letter-spacing: 2px;
-    color: #ff4fd8;
-    text-shadow: 0 0 18px #b14cff;
+.progress-counter{
+    margin-top:14px;
+    font-size:2.2rem;
+    letter-spacing:2px;
+
+    color:var(--primary);
+    text-shadow:0 0 18px var(--primary);
 }
 
 /* ========================= SECTION 3 ========================= */
-#section3 h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #ff4fd8;
-    text-shadow: 0 0 20px #b14cff;
-    font-size: 230%;
+#section3 h1{
+    text-align:center;
+    margin-bottom:20px;
+    font-size:230%;
+
+    color:var(--primary);
+    text-shadow:0 0 20px var(--primary);
 }
 
 /* ========================= REWARDS ========================= */
-#rewards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
+#rewards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
 }
 
-.reward-card {
-    background: linear-gradient(180deg, #1a0033, #090014);
-    border-radius: 14px;
-    padding: 10px;
-    text-align: center;
-    box-shadow: 0 0 18px rgba(177, 76, 255, 0.35);
-    animation: pop 0.3s ease;
+.reward-card{
+    background:linear-gradient(180deg,var(--bg-panel),var(--bg-dark));
+    border-radius:14px;
+    padding:10px;
+    text-align:center;
+
+    box-shadow:0 0 18px rgba(0,229,255,0.25);
+    animation:pop .3s ease;
+    transition:.25s;
 }
 
-.reward-card img {
-    width: 100%;
-    max-width: 85px;
-    display: block;
-    margin: auto;
-    filter: drop-shadow(0 0 12px #ff4fd8);
+.reward-card:hover{
+    transform:translateY(-4px) scale(1.05);
+    box-shadow:0 0 25px var(--primary);
 }
 
-.reward-card p {
-    margin-top: 6px;
-    font-size: 13px;
-    color: #ff4fd8;
+.reward-card img{
+    width:100%;
+    max-width:85px;
+    display:block;
+    margin:auto;
+
+    filter:drop-shadow(0 0 12px var(--primary));
+}
+
+.reward-card p{
+    margin-top:6px;
+    font-size:13px;
+    color:var(--primary);
 }
 
 /* ========================= RADIO SWITCH ========================= */
-span input[type="radio"] {
-    appearance: none;
-    width: 46px;
-    height: 24px;
-    background: #0d001a;
-    border-radius: 50px;
-    position: relative;
-    cursor: pointer;
-    transition: 0.3s ease;
-    box-shadow: inset 0 0 10px rgba(177, 76, 255, 0.3);
+span input[type="radio"]{
+    appearance:none;
+    width:46px;
+    height:24px;
+    background:#101828;
+    border-radius:50px;
+    position:relative;
+    cursor:pointer;
+    transition:.3s;
 }
 
-span input[type="radio"]::before {
-    content: "";
-    position: absolute;
-    top: 3px;
-    left: 4px;
-    width: 18px;
-    height: 18px;
-    background: #555;
-    border-radius: 50%;
-    transition: 0.3s ease;
+span input[type="radio"]::before{
+    content:"";
+    position:absolute;
+    top:3px;
+    left:4px;
+    width:18px;
+    height:18px;
+    background:#555;
+    border-radius:50%;
+    transition:.3s;
 }
 
-span input[type="radio"]:checked {
-    background: linear-gradient(90deg, #b14cff, #ff4fd8);
-    box-shadow: 0 0 18px rgba(255, 79, 216, 1);
+span input[type="radio"]:checked{
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+    box-shadow:0 0 18px var(--primary);
 }
 
-span input[type="radio"]:checked::before {
-    transform: translateX(22px);
-    background: #000;
+span input[type="radio"]:checked::before{
+    transform:translateX(22px);
+    background:#000;
 }
 
 /* ========================= ANIMATIONS ========================= */
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(20px);
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    to{
+        opacity:1;
+        transform:translateY(0);
     }
 }
 
-@keyframes pop {
-    from {
-        transform: scale(0.85);
-        opacity: 0;
+@keyframes pop{
+    from{
+        transform:scale(.85);
+        opacity:0;
     }
-    to {
-        transform: scale(1);
-        opacity: 1;
+    to{
+        transform:scale(1);
+        opacity:1;
     }
 }
 
 /* ========================= RESPONSIVE ========================= */
-@media (max-width: 480px) {
-    .container {
-        width: 92vw;
-        max-width: 360px;
-        padding: 20px 16px;
+@media(max-width:480px){
+
+    .container{
+        width:92vw;
+        max-width:360px;
+        padding:20px 16px;
     }
 
-    #rewards {
-        grid-template-columns: repeat(2, 1fr);
+    #rewards{
+        grid-template-columns:repeat(2,1fr);
     }
 }
